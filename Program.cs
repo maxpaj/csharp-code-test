@@ -67,8 +67,15 @@ public class Program
     {
         throw new NotImplementedException();
     }
-
-    private static decimal GetTotalFeeForSubscriptionsService(List<Address> addresses, string iptv)
+    
+    /// <summary>
+    /// Finds the total fee of a specific subscription service across all addresses.
+    /// </summary>
+    /// <param name="addresses"></param>
+    /// <param name="service"></param>
+    /// <returns>Fee of subscription service across all addresses.</returns>
+    /// <exception cref="NotImplementedException"></exception>
+    private static decimal GetTotalFeeForSubscriptionsService(List<Address> addresses, string service)
     {
         throw new NotImplementedException();
     }
