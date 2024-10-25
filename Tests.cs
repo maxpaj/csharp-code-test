@@ -22,9 +22,9 @@ public class Tests
             Program.GetTotalFeeForActiveSubscriptionDuringYearAndMonth(Program.AllAddresses, 2024, 10);
         Assert.That(totalFeeOctober, Is.EqualTo(975));
 
-        var totalFeeNovember =
-            Program.GetTotalFeeForActiveSubscriptionDuringYearAndMonth(Program.AllAddresses, 2024, 11);
-        Assert.That(totalFeeNovember, Is.EqualTo(525));
+        var totalFeeDecember =
+            Program.GetTotalFeeForActiveSubscriptionDuringYearAndMonth(Program.AllAddresses, 2024, 12);
+        Assert.That(totalFeeDecember, Is.EqualTo(1325));
     }
 
     [Test]
