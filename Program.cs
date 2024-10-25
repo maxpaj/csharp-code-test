@@ -78,7 +78,7 @@ public class Program
     /// <exception cref="NotImplementedException"></exception>
     public static decimal GetTotalFeeForSubscriptionsService(List<Address> addresses, string service)
     {
-        return addresses.SelectMany(a => a.Subscriptions).Where(s => s.Service == service).Sum(s => s.Fee);
+        throw new NotImplementedException();
     }
 
     /// <summary>
