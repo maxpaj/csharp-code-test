@@ -66,7 +66,7 @@ public class Program
     public static decimal GetTotalFeeForActiveSubscriptionDuringYearAndMonth(List<Address> addresses,
         int year, int month)
     {
-        throw new NotImplementedException();
+        throw new NotImplementedException();    
     }
     
     /// <summary>
@@ -78,7 +78,7 @@ public class Program
     /// <exception cref="NotImplementedException"></exception>
     public static decimal GetTotalFeeForSubscriptionsService(List<Address> addresses, string service)
     {
-        throw new NotImplementedException();
+        return addresses.SelectMany(a => a.Subscriptions).Where(s => s.Service == service).Sum(s => s.Fee);
     }
 
     /// <summary>

@@ -28,12 +28,19 @@ public class Tests
     }
 
     [Test]
-    public void GetCitiesOrderedByNumberOfSubscriptions()
+    public void GetCitiesOrderedByNumberOfSubscriptionsTest()
     {
         var citiesSubscriptionNumbers = Program.GetCitiesOrderedByNumberOfSubscriptions(Program.AllAddresses);
         var first = citiesSubscriptionNumbers.First();
 
         Assert.That(first.Subscriptions, Is.EqualTo(11));
         Assert.That(first.City, Is.EqualTo("Stockholm"));
+    }
+    
+    [Test]
+    public void GetTotalFeeOfServiceAcrossAllSubscriptionsTest()
+    {
+        var totalFeeOfService = Program.GetTotalFeeForSubscriptionsService(Program.AllAddresses, "IPTV");
+        Assert.That(totalFeeOfService, Is.EqualTo(525));
     }
 }
