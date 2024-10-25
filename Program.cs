@@ -39,9 +39,10 @@ public class Program
 
     /// <summary>
     /// Finds subscriptions that are active during any time of a given year-month combination.
-    ///
+    /// 
     /// Active meaning, the ActivationYear and ActivationMonth of the subscription is the current year-month, or the date combination is in the past.
     /// </summary>
+    /// <param name="addresses"></param>
     /// <param name="year"></param>
     /// <param name="month"></param>
     /// <returns>The total fee of the active subscriptions</returns>
@@ -75,7 +76,21 @@ public class Program
     /// <param name="service"></param>
     /// <returns>Fee of subscription service across all addresses.</returns>
     /// <exception cref="NotImplementedException"></exception>
-    private static decimal GetTotalFeeForSubscriptionsService(List<Address> addresses, string service)
+    public static decimal GetTotalFeeForSubscriptionsService(List<Address> addresses, string service)
+    {
+        throw new NotImplementedException();
+    }
+
+    /// <summary>
+    /// Finds all addresses with yet-to-be activated subscriptions, given the current date as a year-month combination.
+    /// </summary>
+    /// <param name="addresses"></param>
+    /// <param name="currentYear"></param>
+    /// <param name="currentMonth"></param>
+    /// <returns>All addresses with yet-to-be subscription activations.</returns>
+    /// <exception cref="NotImplementedException"></exception>
+    public static IEnumerable<Address> GetAddressesWithFutureSubscriptionActivations(
+        List<Address> addresses, int currentYear, int currentMonth)
     {
         throw new NotImplementedException();
     }
@@ -88,18 +103,6 @@ public class Program
     /// <exception cref="NotImplementedException"></exception>
     public static IEnumerable<(string City, int Subscriptions)> GetCitiesOrderedByNumberOfSubscriptions(
         List<Address> address)
-    {
-        throw new NotImplementedException();
-    }
-
-    /// <summary>
-    /// Finds all addresses with yet-to-be activated subscriptions, given the current date as a year-month combination.
-    /// </summary>
-    /// <param name="addresses"></param>
-    /// <returns>All addresses with yet-to-be subscription activations.</returns>
-    /// <exception cref="NotImplementedException"></exception>
-    public static IEnumerable<Address> GetAddressesWithFutureSubscriptionActivations(
-        List<Address> addresses, int currentYear, int currentMonth)
     {
         throw new NotImplementedException();
     }
@@ -283,8 +286,8 @@ public class Program
             [
                 new Subscription()
                 {
-                    ActivationYear = 2024,
-                    ActivationMonth = 10,
+                    ActivationYear = 2023,
+                    ActivationMonth = 12,
                     Fee = 100,
                     Service = "100/100 Mbit",
                 },

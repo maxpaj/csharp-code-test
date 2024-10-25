@@ -20,7 +20,7 @@ public class Tests
     {
         var totalFeeOctober =
             Program.GetTotalFeeForActiveSubscriptionDuringYearAndMonth(Program.AllAddresses, 2024, 10);
-        Assert.That(totalFeeOctober, Is.EqualTo(1325));
+        Assert.That(totalFeeOctober, Is.EqualTo(975));
 
         var totalFeeNovember =
             Program.GetTotalFeeForActiveSubscriptionDuringYearAndMonth(Program.AllAddresses, 2024, 11);
