@@ -45,7 +45,7 @@ public class Program
     /// <param name="addresses"></param>
     /// <param name="year"></param>
     /// <param name="month"></param>
-    /// <returns>The total fee of the active subscriptions</returns>
+    /// <returns>All active subscriptions among the given addresses</returns>
     /// <exception cref="NotImplementedException"></exception>
     public static IEnumerable<Subscription> GetActiveSubscriptionsDuringYearAndMonth(List<Address> addresses, int year,
         int month)
