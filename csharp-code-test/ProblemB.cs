@@ -11,7 +11,6 @@ public class ProblemB
     /// <param name="year">Any year</param>
     /// <param name="month">Any month of a year (numbered 1 through 12)</param>
     /// <returns>The total fee of the active subscriptions</returns>
-    /// <exception cref="NotImplementedException"></exception>
     public static decimal GetTotalFeeForActiveSubscriptionDuringYearAndMonth(IEnumerable<Address> addresses,
         int year, int month)
     {

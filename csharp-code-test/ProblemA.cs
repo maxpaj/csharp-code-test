@@ -11,7 +11,6 @@ public class ProblemA
     /// <param name="year">Any year</param>
     /// <param name="month">Any month of a year (numbered 1 through 12)</param>
     /// <returns>All subscriptions that are active for the given year, month and addresses</returns>
-    /// <exception cref="NotImplementedException"></exception>
     public static IEnumerable<Subscription> GetActiveSubscriptionsDuringYearAndMonth(IEnumerable<Address> addresses, int year,
         int month)
     {

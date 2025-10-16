@@ -8,7 +8,6 @@ public class ProblemC
     /// <param name="addresses">A enumerable of addresses</param>
     /// <param name="service"></param>
     /// <returns>Fee of subscription service across all addresses.</returns>
-    /// <exception cref="NotImplementedException"></exception>
     public static decimal GetTotalFeeForSubscriptionsService(IEnumerable<Address> addresses, string service)
     {
         throw new NotImplementedException();

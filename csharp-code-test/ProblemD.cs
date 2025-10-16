@@ -11,7 +11,6 @@ public class ProblemD
     /// <param name="year">Any year</param>
     /// <param name="month">Any month of a year (numbered 1 through 12)</param>
     /// <returns>All addresses with yet-to-be subscription activations.</returns>
-    /// <exception cref="NotImplementedException"></exception>
     public static IEnumerable<Address> GetAddressesWithFutureSubscriptionActivations(
         IEnumerable<Address> addresses, int year, int month)
     {

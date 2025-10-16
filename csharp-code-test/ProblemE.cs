@@ -14,7 +14,6 @@ public class ProblemE
     /// </summary>
     /// <param name="addresses">A enumerable of addresses</param>
     /// <returns>A list of city/number-of-subscriptions pairs</returns>
-    /// <exception cref="NotImplementedException"></exception>
     public static IEnumerable<(string City, int Subscriptions)> GetCitiesOrderedByNumberOfSubscriptions(
         IEnumerable<Address> addresses)
     {
