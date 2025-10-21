@@ -7,7 +7,7 @@ public class ProblemETests
     [Test]
     public void CitiesOrderedByNumberOfSubscriptions()
     {
-        var citiesSubscriptionNumbers = ProblemE.GetCitiesOrderedByNumberOfSubscriptions(Addresses.All);
+        var citiesSubscriptionNumbers = ProblemE.GetCitiesOrderedByNumberOfSubscriptions(TestAddresses.All);
         var first = citiesSubscriptionNumbers.First();
 
         Assert.Multiple(() =>

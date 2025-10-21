@@ -1,6 +1,8 @@
-namespace csharp_code_test;
+using csharp_code_test;
 
-public static class Addresses
+namespace csharp_code_test_tests;
+
+public static class TestAddresses
 {
     public static readonly List<Address> All =
     [

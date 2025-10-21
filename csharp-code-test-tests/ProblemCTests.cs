@@ -7,7 +7,7 @@ public class ProblemCTests
     [Test]
     public void TotalFeeOfIPTV()
     {
-        var totalFeeOfService = ProblemC.GetTotalFeeForSubscriptionsService(Addresses.All, "IPTV");
+        var totalFeeOfService = ProblemC.GetTotalFeeForSubscriptionsService(TestAddresses.All, "IPTV");
         Assert.That(totalFeeOfService, Is.EqualTo(525));
     }
 }
