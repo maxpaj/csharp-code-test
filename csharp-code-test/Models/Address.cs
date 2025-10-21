@@ -1,7 +1,7 @@
 namespace csharp_code_test;
 
 /// <summary>
-/// Represents an area of a city, with any subscriptions attached to that area
+/// Represents an area of a city, with any subscriptions attached to that area.
 /// </summary>
 public class Address
 {
