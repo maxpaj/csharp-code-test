@@ -5,23 +5,62 @@ namespace csharp_code_test_tests;
 public class ProblemATests
 {
     [Test]
-    public void ActiveSubscriptionsJanuary2021()
+    public void ReturnsAllActiveSubscriptions()
     {
-        var subscriptionActive = ProblemA.GetActiveSubscriptionsDuringYearAndMonth(TestAddresses.All, 2021, 1);
-        Assert.That(subscriptionActive.Count, Is.EqualTo(1));
+        var futureYear = int.MaxValue;
+        var subscriptionActive = ProblemA.GetActiveSubscriptionsDuringYearAndMonth(TestAddresses.All, futureYear, 1);
+        Assert.That(subscriptionActive.Count, Is.EqualTo(TestAddresses.All.SelectMany(adr => adr.Subscriptions).Count()));
     }
 
     [Test]
-    public void ActiveSubscriptionsOctober2021()
+    public void ReturnsNoActiveSubscriptions()
     {
-        var subscriptionActive = ProblemA.GetActiveSubscriptionsDuringYearAndMonth(TestAddresses.All, 2021, 10);
-        Assert.That(subscriptionActive.Count, Is.EqualTo(11));
+        var pastYear = int.MinValue;
+        var subscriptionActive = ProblemA.GetActiveSubscriptionsDuringYearAndMonth(TestAddresses.All, pastYear, 1);
+        Assert.That(subscriptionActive.Count, Is.EqualTo(0));
     }
 
     [Test]
-    public void ActiveSubscriptionDecember2021()
+    public void ReturnsActiveSubscriptionsWhenGivenMonthIsLessThanSubscriptionActivationMonth()
     {
-        var subscriptionActive = ProblemA.GetActiveSubscriptionsDuringYearAndMonth(TestAddresses.All, 2021, 12);
-        Assert.That(subscriptionActive.Count, Is.EqualTo(15));
+        var givenYear = 2021;
+        var givenMonth = 10;
+
+        var previousYear = 2020;
+        var previousYearMonth = 12;
+
+        var addresses = new List<Address>
+        {
+            new() {
+                Subscriptions =
+                [
+                    new Subscription()
+                    {
+                        ActivationYear = givenYear,
+                        ActivationMonth = givenMonth,
+                        Fee = 100,
+                        Service = "100/100 Mbit",
+                    },
+                    new Subscription()
+                    {
+                        ActivationYear = givenYear,
+                        ActivationMonth = givenMonth,
+                        Fee = 75,
+                        Service = "IPTV",
+                    },
+                    new Subscription()
+                    {
+                        ActivationYear = previousYear,
+                        ActivationMonth = previousYearMonth,
+                        Fee = 100,
+                        Service = "100/100 Mbit",
+                    }
+                ]
+            }
+        };
+
+
+        var subscriptionActive = ProblemA.GetActiveSubscriptionsDuringYearAndMonth(addresses, givenYear, givenMonth);
+        Assert.That(subscriptionActive.Count, Is.EqualTo(3));
     }
 }
