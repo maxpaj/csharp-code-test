@@ -1,4 +1,4 @@
-namespace csharp_code_test;
+namespace exercise;
 
 /// <summary>
 /// Represents a service subscription, with activation date and fee.

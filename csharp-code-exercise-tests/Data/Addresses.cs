@@ -1,10 +1,10 @@
-using csharp_code_test;
+using exercise;
 
-namespace csharp_code_test_tests;
+namespace exercise_tests;
 
-public static class TestAddresses
+public static class Addresses
 {
-    public static readonly List<Address> All =
+    public static readonly IEnumerable<Address> All =
     [
         new Address
         {

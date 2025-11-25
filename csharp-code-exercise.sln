@@ -1,8 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "csharp-code-test-tests", "csharp-code-test-tests\csharp-code-test-tests.csproj", "{2AC0905C-1144-4638-AA66-188D2F610383}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "exercise-tests", "csharp-code-exercise-tests\exercise-tests.csproj", "{2AC0905C-1144-4638-AA66-188D2F610383}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "csharp-code-test", "csharp-code-test\csharp-code-test.csproj", "{9F13CEEC-3B49-4BD2-979C-213DD3069AA2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "exercise", "csharp-code-exercise\exercise.csproj", "{9F13CEEC-3B49-4BD2-979C-213DD3069AA2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
