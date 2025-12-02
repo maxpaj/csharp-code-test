@@ -1,4 +1,4 @@
-namespace csharp_code_test;
+namespace exercise;
 
 /// <summary>
 /// Represents an area of a city, with any subscriptions attached to that area.
