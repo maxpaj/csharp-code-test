@@ -26,4 +26,33 @@ public class ExerciseTests
 
         Assert.That(subscriptionActive.Count, Is.EqualTo(0));
     }
+
+    [Test]
+    public void ReturnsActiveSubscriptionsLimitedToTheGivenMonth()
+    {
+        var addresses = new List<Address>
+        {
+            new() {
+                Subscriptions =
+                [
+                    new Subscription { ActivationYear = 2021, ActivationMonth = 1 },
+                    new Subscription { ActivationYear = 2021, ActivationMonth = 2 },
+                    new Subscription { ActivationYear = 2021, ActivationMonth = 3 },
+                    new Subscription { ActivationYear = 2022, ActivationMonth = 1 },
+                    new Subscription { ActivationYear = 2022, ActivationMonth = 2 },
+                    new Subscription { ActivationYear = 2022, ActivationMonth = 3 },
+                    new Subscription { ActivationYear = 2023, ActivationMonth = 1 },
+                    new Subscription { ActivationYear = 2023, ActivationMonth = 2 },
+                    new Subscription { ActivationYear = 2023, ActivationMonth = 3 },
+                ]
+            }
+        };
+
+        var subscriptionActive = Exercise.GetActiveSubscriptionsDuringYearAndMonth(addresses, 2022, 2);
+
+        Assert.That(
+            subscriptionActive.Count,
+            Is.EqualTo(5)
+        );
+    }
 }
