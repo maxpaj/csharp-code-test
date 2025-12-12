@@ -3,12 +3,12 @@ namespace exercise;
 public class Exercise
 {
     /// <summary>
-    /// Given a year and month, and a collection of addresses with associated 
+    /// Given the input year, month and a collection of addresses with associated 
     /// subscriptions, find all the subscriptions that are active.
     /// 
-    /// A subscription is active when the subscription activation 
-    /// date (year and month) is either in the past relative to the given year 
-    /// and month, or when the subscription activation date is the exact given 
+    /// A subscription is considered active when the its activation 
+    /// date (year and month) is either in the past relative to the input year 
+    /// and month, or when the subscription activation date is the exact input 
     /// year and month.
     /// </summary>
     /// <param name="addresses">A enumerable of addresses</param>
